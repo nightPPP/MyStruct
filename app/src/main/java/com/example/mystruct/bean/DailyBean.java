@@ -1,10 +1,12 @@
 package com.example.mystruct.bean;
 
-import com.example.mvplib.BaseModel;
-
 import java.util.List;
 
-public class DailyBean implements BaseModel {
+/**
+ *
+ * @author smart
+ */
+public class DailyBean{
     private String date;
     private List stories;
 

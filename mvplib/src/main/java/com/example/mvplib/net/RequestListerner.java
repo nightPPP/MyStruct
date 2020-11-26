@@ -2,11 +2,12 @@ package com.example.mvplib.net;
 
 
 /**
+ * 联网回调
  * @author smart
  */
-public interface MyListerner<T> {
+public interface RequestListerner<T> {
 
     void onSuccess(T result);
 
-    void onError(String errorMsg);
+    void onError(T result);
 }

@@ -27,8 +27,8 @@ public class RequestManager {
         return queue;
     }
 
-    public void sendGet(String url, Class clazz, final MyListerner listener){
-        MyRequest request = new MyRequest(url, clazz, new Response.Listener() {
+    public void sendGet(String url, Class clazz, final RequestListerner listener){
+        RequestNet request = new RequestNet(url, clazz, new Response.Listener() {
             @Override
             public void onResponse(Object response) {
                 listener.onSuccess(response);
@@ -45,8 +45,8 @@ public class RequestManager {
     public void sendPost(String url,
                          Class clazz,
                          final HashMap map,
-                         final MyListerner listerner){
-        MyRequest request = new MyRequest(Request.Method.POST,
+                         final RequestListerner listerner){
+        RequestNet request = new RequestNet(Request.Method.POST,
                 url, clazz,
                 new Response.Listener() {
                     @Override

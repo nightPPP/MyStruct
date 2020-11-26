@@ -13,22 +13,22 @@ import java.io.UnsupportedEncodingException;
 /**
  * @author smart
  */
-public class MyRequest<T> extends Request<T>{
+public class RequestNet<T> extends Request<T>{
 
     private Gson mGSon;
     private Class mClass;
     private Response.Listener mListener;
-    public MyRequest(String url,
-                     Class clazz,
-                     Response.Listener listener,
-                     Response.ErrorListener errorListener){
+    public RequestNet(String url,
+                      Class clazz,
+                      Response.Listener listener,
+                      Response.ErrorListener errorListener){
         this(Request.Method.GET,url,clazz,listener,errorListener);
     }
-    public MyRequest(int method,
-                     String url,
-                     Class clazz,
-                     Response.Listener listener,
-                     Response.ErrorListener errorListener){
+    public RequestNet(int method,
+                      String url,
+                      Class clazz,
+                      Response.Listener listener,
+                      Response.ErrorListener errorListener){
         super(method,url,errorListener);
         mGSon=new Gson();
         mClass=clazz;
